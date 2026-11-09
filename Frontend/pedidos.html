@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis pedidos - Mi Tienda</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <div class="pagina">
+      <header>
+        <nav>
+          <strong>Mi Tienda</strong>
+          <ul class="lista_navegacion">
+            <li class="elemento_lista"><a href="index.html">Inicio</a></li>
+            <li class="elemento_lista"><a href="catalogo.html">Catalogo</a></li>
+            <li class="elemento_lista"><a href="carrito.html">Carrito</a></li>
+            <li class="elemento_lista"><a href="pedidos.html">Mis pedidos</a></li>
+            <li class="elemento_lista" id="item-admin" hidden><a href="admin.html">Admin</a></li>
+            <li class="elemento_lista" id="item-entrar"><a href="login.html">Entrar</a></li>
+            <li class="elemento_lista" id="item-registro"><a href="registro.html">Registro</a></li>
+            <li class="elemento_lista" id="item-salir" hidden>
+              <button id="btn-salir" type="button">Cerrar sesión</button>
+            </li>
+          </ul>
+        </nav>
+        <p id="sesion">No has iniciado sesión</p>
+      </header>
+      <main>
+        <h1>Mis pedidos</h1>
+        <p id="mensaje"></p>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Pedido</th>
+              <th>Fecha</th>
+              <th>Estado</th>
+              <th>Total</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="lista"></tbody>
+        </table>
+      </main>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/comun.js"></script>
+    <script src="js/pedidos.js"></script>
+  </body>
+</html>

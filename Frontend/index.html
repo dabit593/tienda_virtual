@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Tienda</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <div class="pagina">
+      <header>
+        <nav>
+          <strong>Mi Tienda</strong>
+          <ul class="lista_navegacion">
+            <li class="elemento_lista"><a href="index.html">Inicio</a></li>
+            <li class="elemento_lista"><a href="catalogo.html">Catalogo</a></li>
+            <li class="elemento_lista"><a href="carrito.html">Carrito</a></li>
+            <li class="elemento_lista"><a href="pedidos.html">Mis pedidos</a></li>
+            <li class="elemento_lista" id="item-admin" hidden><a href="admin.html">Admin</a></li>
+            <li class="elemento_lista" id="item-entrar"><a href="login.html">Entrar</a></li>
+            <li class="elemento_lista" id="item-registro"><a href="registro.html">Registro</a></li>
+            <li class="elemento_lista" id="item-salir" hidden>
+              <button id="btn-salir" type="button">Cerrar sesión</button>
+            </li>
+          </ul>
+        </nav>
+        <p id="sesion">No has iniciado sesión</p>
+      </header>
+      <div class="contenido">
+        <aside>
+          <h2>Categorias</h2>
+          <div id="categorias"></div>
+        </aside>
+        <main>
+          <h1>Bienvenido a mi tienda</h1>
+          <h2>Buscar producto</h2>
+          <form action="catalogo.html" method="get">
+            <label>Buscar</label><br />
+            <input id="q" type="search" name="q" placeholder="Nombre o descripcion" />
+            <button type="submit">Buscar</button>
+          </form>
+          <h2>Destacados</h2>
+          <div id="destacados"></div>
+        </main>
+      </div>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/comun.js"></script>
+    <script src="js/inicio.js"></script>
+  </body>
+</html>
